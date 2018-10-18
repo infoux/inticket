@@ -1290,18 +1290,16 @@ body {
         .relative;
         z-index: 800;
 
-        & > .container {
-            .rem(height, 52);
-            .relative;
+        @media all and (min-width: 1200px) {
+            padding: 0 0 40px 0;
+        }
 
-            @media all and (min-width: 1200px) {
-                height: 120px;
-                margin-bottom: 60px;
-            }
+        & > .container {
+            .relative;
 
             h1 {
                 .zero;
-                .rem(margin, 14 0 0);
+                .rem(margin, 14 auto 10 auto);
                 .rem(width, 70);
                 .rem(height, 19);
 
@@ -1318,321 +1316,54 @@ body {
                 }
             }
 
-
-            button.mobileMenu {
+            ul.util-menu {
+                .no-list;
+                .inline-block;
+                width:100%;
                 .zero;
-                border: none;
-                background: none;
-                .mapazero;
-                .absolute;
-                .rem(right, 10);
-                .rem(top, 14);
+                margin: 0;
+                .center;
+                .rem(padding, 0 0 10 0);
 
                 @media all and (min-width: 1200px) {
-                    .none;
-                }
-
-                i {
-                    .rem(font-size, 20);
-                    color: #364701;
-
-                    &::before {
-                        .mapazero;
-                    }
-
-                }
-            }
-        }
-
-        nav#main-menu {
-            @media all and (max-width: 1199px) {
-                .none;
-                .absolute;
-                z-index: 999;
-                .rem(top, 52);
-                left: 0;
-                right: 0;
-                .remCalc(height, 52);
-                background: rgba(0,0,0,0.8);
-                .rem(padding, 0);
-
-                &.on {
-                    .block;
-                }
-
-                .container {
-
-
-                    ul.util-menu {
-                        
-                        .no-list;
-                        .inline-block;
-                        width:100%;
-                        background:#000;
-                        .zero;
-                        margin:0;
-                        .rem(padding, 24 0);
-
-                        li {
-                            .inline-block;
-                            .gradienth(#a4c252, #71930b, #315901);
-                            padding: 1px;
-                            width:calc(~"(100% - 20px) / 3");
-                            margin-right:10px;
-                            .rem(border-radius, 14);
-
-                            &:last-child {
-                                margin-right:0;
-                            }
-
-                            a {
-                                .block;
-                                height:100%;
-                                background:#000;
-                                color: #71930b;
-                                .rem(line-height, 26);
-                                .rem(border-radius, 13);
-                                .rem(font-size, 13);
-                                .center;
-                                
-                                i {
-                                    .none;
-                                }
-                            }
-
-                        }
-        
-                    }
-
-
-                    ul.menu-list {
-                        .no-list;
-                        .rem(margin-top, 60);
-                        padding:0;
-                        .center;
-
-                        & > li {
-
-                            h2 {
-                                .rem(margin, 16 0 0);
-                                a {
-                                    color: @white;
-                                    .rem(font-size, 17);
-                                }
-                            }
-
-                            ul {
-                                .rem(margin, 0 0 40);
-                                background:#000;
-                                .rem(padding, 20 0 6);
-                                .no-list;
-                                .none;
-
-                                li {
-                                    .rem(margin, 0 0 14);
-                                    a {
-                                        color: @white;
-                                        .rem(font-size, 12);
-
-                                        &.active {
-                                            color: #71930b;
-                                        }
-
-                                    }
-                                }
-
-                            }
-
-                            &.on {
-                                h2 {
-                                    &::after {
-                                        .block;
-                                        content: "";
-                                        .rem(width, 40);
-                                        .rem(height, 2);
-                                        .rem(margin, 10 auto 0);
-                                        background: #71930b;
-                                    }
-                                }
-                                ul {
-                                    .block;
-                                }
-                            }
-
-                            &.check {
-                                .none;
-                            }
-
-                        }
-                    }
-
-                }
-            }
-
-            @media all and (min-width: 1200px) {
-                border-top: 1px solid #d9d9d9;
-                .absolute;
-                z-index: 999;
-                left: 0;
-                right: 0;
-                top: 120px;
-                height: 60px;
-                .ani();
-
-                &::after {
-                    content: "";
-                    .block;
                     .absolute;
-                    z-index: -1;
-                    left: 0;
                     right: 0;
-                    top: 60px;
-                    bottom: 0;
-                    background: rgba(0,0,0,1);
+                    top: 35px;
+                    width: 430px;
                 }
 
-                .container {
+                li {
+                    .inline-block;
+                    border: 1px solid #71930b;
+                    padding: 1px;
+                    .rem(border-radius, 20);
+                    .rem(margin-right, 5);
+                    .rem(width, 70);
 
-
-                    ul.util-menu {
-                        .mapazero;
-                        .zero;
-
-                        li {
-                            .inline-block;
-                            .absolute;
-                            top:-80px;
-                            .center;
-                            .gradienth(#a4c252, #71930b, #315901);
-                            padding: 1px;
-                            border-radius:20px;
-                            min-width:140px;
-
-                            &.mypage {
-                                right:150px;
-                            }
-
-                            &.login {
-                                right: 300px;
-                            }
-
-                            &.customer {
-                                right:0;
-                            }
-
-                            a {
-                                .block;
-                                height:100%;
-                                background:@white;
-                                color: #364701;
-                                line-height:38px;
-                                border-radius:19px;
-                                font-size:17px;
-                                padding:0 26px;
-                                .center;
-                                
-                            }
-
-                        }
-        
+                    @media all and (min-width: 1200px) {
+                        width: 140px;
                     }
 
-
-
-                    ul.menu-list {
-                        .no-list;
-                        .mapazero;
-                        .zero;
-                        white-space:nowrap;
-
-                        & > li {
-                            .inline-block;
-                            .top;
-                            width: calc(~"100% / 6");
-
-                            h2 {
-                                .mapazero;
-                                a {
-                                    .block;
-                                    .center;
-                                    font-size: 21px;
-                                    line-height: 60px;
-                                }
-                            }
-
-                            &.check {
-                                h2 {
-                                    a {
-                                        color: #71930b;
-                                    }
-                                }
-                            }
-
-                            ul {
-                                .opacity(0);
-                                .ani();
-                                .no-list;
-                                .mapazero;
-                                height: 0;
-                            }
-
-                        }
+                    &:last-child {
+                        margin-right:0;
                     }
-                }
 
-                &.on {
-                    .ani();
-                    height: 320px;
+                    a {
+                        .block;
+                        height:100%;
+                        color: #71930b;
+                        .rem(line-height, 26);
+                        .rem(border-radius, 13);
+                        .rem(font-size, 10);
+                        .center;
+                        
+                        i {
+                            .none;
+                        }
 
-                    .container {
-                        ul.menu-list {
-                            & > li {
-                                ul {
-                                    .opacity(1);
-                                    .ani();
-                                    padding: 30px 0;
-                                    height:259px;
-
-                                    li {
-                                        a {
-                                            .block;
-                                            .center;
-                                            font-size: 16px;
-                                            color: #666;
-                                            line-height: 30px;
-
-                                            &.active,
-                                            &:hover {
-                                                color: #71930b !important;
-                                            }
-                                        }
-                                    }
-
-                                    &.on {
-                                        background: #000;
-                                        .relative;
-
-                                        &::before {
-                                            content: "";
-                                            .block;
-                                            .absolute;
-                                            left: 76px;
-                                            right: 76px;
-                                            top: -3px;
-                                            height: 2px;
-                                            background: #71930b;
-                                        }
-
-                                        li {
-                                            a {
-                                                color: @white;
-
-                                            }
-                                        }
-                                    }
-
-                                }
-                            }
+                        @media all and (min-width: 1200px) {
+                            font-size: 17px;
+                            line-height: 38px;
                         }
                     }
                 }
@@ -1641,7 +1372,7 @@ body {
     }
 
     div#content {
-        .zero;
+        .zero; 
 
         /* MAIN */
         section.main-issue {
@@ -2209,74 +1940,6 @@ body {
                                             .drop-shadowW(@x:1px, @y: 1px, @blur: 1px, @spread: 0, @alpha: 0.15);
                                         }
                                     }
-                                }
-                            }
-
-                        }
-
-                        &.banner {
-                            .top;
-                            .inline-block;
-                            width: 100%;
-                            background: #a4c252;
-                            .rem(height, 48);
-
-                            @media all and (min-width: 1200px) {
-                                width: calc(~"(100% - 36px) / 4");
-                                height: 255px;
-                            }
-
-                            a {
-                                .inline-block;
-                                width: 100%;
-                                height: 100%;
-
-                                h4 {
-                                    .static;
-                                    .zero;
-                                    .rem(width, 137);
-                                    .rem(height, 29);
-                                    .rem(margin, 10 0 0 10);
-                                    background: url("../images/visitjeju-mobile.svg") no-repeat center / 100%;
-
-                                    @media all and (min-width: 1200px) {
-                                        .block;
-                                        margin: 30px auto 10px;
-                                        width: 208px;
-                                        height: 105px;
-                                        background: url("../images/visitjeju-pc.svg") no-repeat center / 100%;
-                                    }
-
-                                }
-
-                                p {
-
-                                    @media all and (min-width: 1200px) {
-                                        font-size: 15px;
-                                        .center;
-                                        .mapazero;
-                                    }
-                                }
-
-                                strong {
-                                    .block;
-                                    .absolute;
-                                    .rem(right, 10);
-                                    .rem(top, 10);
-                                    .rem(line-height, 28);
-                                    .rem(padding, 0 10);
-                                    background: #315901;
-                                    color: @white;
-                                    .rem(font-size, 12);
-
-                                    @media all and (min-width: 1200px) {
-                                        .static;
-                                        .center;
-                                        margin: 30px 60px 0;
-                                        font-size: 15px;
-                                        line-height: 40px;
-                                    }
-
                                 }
                             }
 
@@ -9388,7 +9051,7 @@ body {
 
                     .absolute;
                     right: 0;
-                    top: 30px;
+                    top: 10px;
 
                 }
 
@@ -9409,7 +9072,6 @@ body {
                         @media all and (min-width: 1200px) {
                             .block;
                             width: 160px;
-
                         }
 
                         a {
@@ -9423,7 +9085,7 @@ body {
                             @media all and (min-width: 1200px) {
                                 line-height: 35px;
                                 font-size: 15px;
-                                margin-bottom: 10px;
+                                padding: 0 20px;
                             }
                         }
 
@@ -9439,53 +9101,6 @@ body {
 
                             width: 100%;
                             margin-top: 16px;
-
-                            div {
-                                background: #323232;
-                                .center;
-                                .relative;
-
-                                @media all and (min-width: 1200px) {
-                                    background: none;
-                                    border: 1px solid #414141;
-                                    margin-top: 30px;
-                                }
-
-                                i {
-                                    font-style: normal;
-                                    .rem(font-size, 12);
-                                    .rem(padding, 0 3);
-
-                                    @media all and (min-width: 1200px) {
-                                        .inline-block;
-                                        .relative;
-                                        top: -16px;
-                                        margin-bottom: 20px;
-                                        background: #2b2b2b;
-                                        padding: 0 4px;
-                                        font-size: 16px;
-
-                                    }
-                                }
-
-                                strong {
-
-                                    color: #a4c252;
-                                    .rem(font-size, 15);
-                                    .rem(line-height, 30);
-
-                                    @media all and (min-width: 1200px) {
-                                        .block;
-                                        .absolute;
-                                        left: 0;
-                                        right: 0;
-                                        bottom: 8px;
-                                        .center;
-                                        font-size: 23px;
-                                    }
-
-                                }
-                            }
                         }
                     }
                 }
@@ -9498,20 +9113,8 @@ body {
                 .relative;
 
                 @media all and (min-width: 1200px) {
-                    margin: 30px 180px 0 230px;
+                    margin: 30px 180px 0 0;
                     font-size: 15px;
-
-                    &::before {
-                        content: "";
-                        .block;
-                        .absolute;
-                        left: -30px;
-                        top: 0;
-                        height: 160px;
-                        width: 1px;
-                        background: #414141;
-                    }
-
                 }
 
                 p {
@@ -9547,7 +9150,7 @@ body {
 
                 @media all and (min-width: 1200px) {
                     font-size: 15px;
-                    margin: 30px 0 30px 230px;
+                    margin: 10px 0 0 0;
                 }
             }
 

@@ -9041,7 +9041,7 @@ body {
                     top: 30px;
                     width: 162px;
                     height: 70px;
-                    background: url("../images/footer-logo.png") no-repeat center / 100%;
+                    background: url("../images/logo.png") no-repeat center / 100%;
                 }
             }
 
@@ -9051,7 +9051,7 @@ body {
 
                     .absolute;
                     right: 0;
-                    top: 10px;
+                    top: 30px;
 
                 }
 
@@ -9072,6 +9072,7 @@ body {
                         @media all and (min-width: 1200px) {
                             .block;
                             width: 160px;
+
                         }
 
                         a {
@@ -9085,7 +9086,7 @@ body {
                             @media all and (min-width: 1200px) {
                                 line-height: 35px;
                                 font-size: 15px;
-                                padding: 0 20px;
+                                margin-bottom: 10px;
                             }
                         }
 
@@ -9101,6 +9102,53 @@ body {
 
                             width: 100%;
                             margin-top: 16px;
+
+                            div {
+                                background: #323232;
+                                .center;
+                                .relative;
+
+                                @media all and (min-width: 1200px) {
+                                    background: none;
+                                    border: 1px solid #414141;
+                                    margin-top: 30px;
+                                }
+
+                                i {
+                                    font-style: normal;
+                                    .rem(font-size, 12);
+                                    .rem(padding, 0 3);
+
+                                    @media all and (min-width: 1200px) {
+                                        .inline-block;
+                                        .relative;
+                                        top: -16px;
+                                        margin-bottom: 20px;
+                                        background: #2b2b2b;
+                                        padding: 0 4px;
+                                        font-size: 16px;
+
+                                    }
+                                }
+
+                                strong {
+
+                                    color: #eb992b;
+                                    .rem(font-size, 15);
+                                    .rem(line-height, 30);
+
+                                    @media all and (min-width: 1200px) {
+                                        .block;
+                                        .absolute;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 8px;
+                                        .center;
+                                        font-size: 23px;
+                                    }
+
+                                }
+                            }
                         }
                     }
                 }
@@ -9113,8 +9161,20 @@ body {
                 .relative;
 
                 @media all and (min-width: 1200px) {
-                    margin: 30px 180px 0 0;
+                    margin: 30px 180px 0 230px;
                     font-size: 15px;
+
+                    &::before {
+                        content: "";
+                        .block;
+                        .absolute;
+                        left: -30px;
+                        top: 0;
+                        height: 160px;
+                        width: 1px;
+                        background: #414141;
+                    }
+
                 }
 
                 p {
@@ -9150,7 +9210,7 @@ body {
 
                 @media all and (min-width: 1200px) {
                     font-size: 15px;
-                    margin: 10px 0 0 0;
+                    margin: 30px 0 30px 230px;
                 }
             }
 
@@ -9184,3 +9244,4 @@ body {
 
     }
 }
+
